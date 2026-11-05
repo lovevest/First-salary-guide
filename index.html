@@ -22,9 +22,9 @@ input[type=range]{width:100%;accent-color:var(--pri)}
 .err{color:#d93a3a;font-size:13px;min-height:18px}
 .bar{display:flex;height:22px;border-radius:11px;overflow:hidden;margin:12px 0}
 .bar div{transition:width .15s}
-.row{display:flex;justify-content:space-between;align-items:center;font-size:14px;margin:6px 0;gap:12px}
+.row{display:flex;justify-content:space-between;align-items:center;font-size:14px;margin:6px 0}
 .dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px}
-.big{font-weight:700;text-align:right;flex:0 0 auto}
+.big{font-weight:700}
 .note{font-size:13px;color:var(--mut)}
 .stage{display:flex;gap:12px;padding:12px 0;border-top:1px solid var(--bd)}
 .stage:first-of-type{border-top:0}
@@ -91,7 +91,6 @@ button.ghost{background:transparent;color:var(--mut);border:1px solid var(--bd)}
 <input id="ins" type="number" inputmode="numeric" min="0" placeholder="เช่น 12000 (ไม่มีให้เว้นว่าง)">
 <div id="taxout" style="margin-top:10px"></div>
 </section>
-
 <div class="warn">ข้อมูลทั่วไปเพื่อการเรียนรู้ ไม่ใช่คำแนะนำทางการเงินส่วนบุคคล ผลตอบแทนในตัวอย่างเป็นเพียงสมมติฐาน ไม่ได้รับประกันผลจริง การลงทุนมีความเสี่ยง ผู้ลงทุนอาจสูญเงินต้น</div>
 </main>
 <script>
@@ -142,4 +141,44 @@ function tax(n){var b=[[150000,0],[150000,0.05],[200000,0.1],[250000,0.15],[2500
 function bonus(){
  var inc=S.sal*12,o=$("taxout");
  if(!(inc>0)){o.innerHTML='<p class="note">กรอกเงินเดือนด้านบนเพื่อประมาณภาษี</p>';return}
- var base=Math.min(in
+ var base=Math.min(inc*0.5,100000)+60000+Math.min(inc*0.05,9000);
+ var pv=Math.min((S.p||0)*12,inc*0.15,500000),ins=Math.min(S.i||0,100000);
+ var t0=tax(Math.max(0,inc-base)),t1=tax(Math.max(0,inc-base-pv-ins));
+ var h='<div class="row"><span>รายได้ต่อปี (เงินเดือน x 12)</span><span class="big">'+fmt(inc)+' บาท</span></div>'+
+ '<div class="row"><span>ค่าลดหย่อนพื้นฐาน (ส่วนตัว ค่าใช้จ่าย ประกันสังคม)</span><span class="big">'+fmt(base)+' บาท</span></div>';
+ if(pv+ins>0)h+='<div class="row"><span>ลดหย่อนจาก PVD และประกัน</span><span class="big">'+fmt(pv+ins)+' บาท</span></div>';
+ h+='<div class="row"><span>ภาษีโดยประมาณต่อปี</span><span class="big">'+fmt(t1)+' บาท</span></div>';
+ if(t0>t1)h+='<p class="note">PVD และประกันช่วยประหยัดภาษีได้ราว '+fmt(t0-t1)+' บาทต่อปี</p>';
+ else if(t1===0)h+='<p class="note">รายได้ระดับนี้ยังอยู่ในช่วงที่ไม่ต้องเสียภาษี แต่ PVD ยังช่วยออมระยะยาวได้</p>';
+ h+='<p class="note">เป็นการประมาณคร่าว ๆ ตามอัตราขั้นบันไดปัจจุบัน ไม่รวมลดหย่อนอื่น ควรตรวจสอบกับกรมสรรพากรก่อนยื่นจริง</p>';
+ o.innerHTML=h;
+}
+function initBonus(){
+ S.c=S.c||[];
+ $("pvd").value=S.p||"";$("ins").value=S.i||"";
+ var cs=document.querySelectorAll("input[data-c]");
+ for(var k=0;k<cs.length;k++){(function(el){var id=+el.getAttribute("data-c");el.checked=!!S.c[id];el.onchange=function(){S.c[id]=el.checked;save()}})(cs[k])}
+}
+function render(){
+ $("sal").value=S.sal||"";$("exp").value=S.exp||"";
+ $("sn").value=S.n;$("sw").value=S.w;
+ calc();stages();initBonus();
+}
+function validate(){
+ var e=$("err");
+ if(S.sal<0||S.exp<0)e.textContent="กรอกตัวเลขที่ไม่ติดลบ";
+ else if(S.exp>S.sal&&S.sal>0)e.textContent="รายจ่ายมากกว่ารายได้ ลองตรวจตัวเลขอีกครั้ง";
+ else e.textContent="";
+}
+$("sal").oninput=function(){S.sal=Math.max(0,+this.value||0);validate();save();calc();stages()};
+$("exp").oninput=function(){S.exp=Math.max(0,+this.value||0);validate();save();calc();stages()};
+$("sn").oninput=function(){S.n=+this.value;if(S.n+S.w>100){S.w=100-S.n;$("sw").value=S.w}save();calc();stages()};
+$("sw").oninput=function(){S.w=+this.value;if(S.n+S.w>100){S.n=100-S.w;$("sn").value=S.n}save();calc();stages()};
+$("stages").onclick=function(ev){var b=ev.target.closest("button");if(!b)return;S.step=+b.getAttribute("data-i")+1;save();stages()};
+$("pvd").oninput=function(){S.p=Math.max(0,+this.value||0);save();bonus()};
+$("ins").oninput=function(){S.i=Math.max(0,+this.value||0);save();bonus()};
+$("reset").onclick=function(){S={sal:0,exp:0,n:50,w:30,step:0,p:0,i:0,c:[]};save();validate();render()};
+render();
+</script>
+</body>
+</html>
