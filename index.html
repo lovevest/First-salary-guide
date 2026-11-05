@@ -22,9 +22,9 @@ input[type=range]{width:100%;accent-color:var(--pri)}
 .err{color:#d93a3a;font-size:13px;min-height:18px}
 .bar{display:flex;height:22px;border-radius:11px;overflow:hidden;margin:12px 0}
 .bar div{transition:width .15s}
-.row{display:flex;justify-content:space-between;align-items:center;font-size:14px;margin:6px 0}
+.row{display:flex;justify-content:space-between;align-items:center;font-size:14px;margin:6px 0;gap:12px}
 .dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px}
-.big{font-weight:700}
+.big{font-weight:700;text-align:right;flex:0 0 auto}
 .note{font-size:13px;color:var(--mut)}
 .stage{display:flex;gap:12px;padding:12px 0;border-top:1px solid var(--bd)}
 .stage:first-of-type{border-top:0}
@@ -39,6 +39,8 @@ button.ghost{background:transparent;color:var(--mut);border:1px solid var(--bd)}
 .warn{background:var(--warn);color:var(--warn-tx);border-radius:12px;padding:10px 12px;font-size:13px}
 .risk{display:flex;gap:8px;align-items:flex-start;font-size:13px;margin:4px 0}
 .tag{font-size:12px;padding:1px 8px;border-radius:8px;color:#fff;flex:0 0 auto}
+.chk{display:flex;gap:10px;align-items:flex-start;font-size:14px;font-weight:400;margin:8px 0}
+.chk input{margin-top:5px;width:18px;height:18px;accent-color:var(--pri);flex:0 0 auto}
 </style>
 </head>
 <body>
@@ -75,10 +77,25 @@ button.ghost{background:transparent;color:var(--mut);border:1px solid var(--bd)}
 <button class="ghost" id="reset" style="margin-top:8px">เริ่มใหม่</button>
 </section>
 
+<section class="card">
+<h2>โบนัส · สวัสดิการ ประกัน PVD และภาษี</h2>
+<p class="note" style="margin-top:0">เช็กสิทธิที่มักมองข้ามเมื่อเริ่มทำงาน ติ๊กเมื่อเช็กแล้ว</p>
+<label class="chk"><input type="checkbox" data-c="0"><span>ประกันสังคม: ถูกหักจากเงินเดือนอัตโนมัติ ตรวจสิทธิรักษาพยาบาลและเงินกรณีว่างงาน</span></label>
+<label class="chk"><input type="checkbox" data-c="1"><span>สวัสดิการบริษัท: ถามฝ่ายบุคคลเรื่องประกันกลุ่ม ค่ารักษา และวันลา</span></label>
+<label class="chk"><input type="checkbox" data-c="2"><span>PVD (กองทุนสำรองเลี้ยงชีพ): ถามว่าบริษัทสมทบเท่าไร ถ้าสมทบให้ ควรสะสมอย่างน้อยเท่าที่บริษัทสมทบ</span></label>
+<label class="chk"><input type="checkbox" data-c="3"><span>ประกันส่วนตัว: ซื้อเมื่อมีเงินสำรองฉุกเฉินแล้ว เน้นประกันสุขภาพและอุบัติเหตุก่อน อย่าซื้อเพราะถูกเชียร์</span></label>
+<h2 style="margin-top:16px">ประมาณภาษีและค่าลดหย่อน</h2>
+<label for="pvd">เงินสะสม PVD ต่อเดือน (บาท)</label>
+<input id="pvd" type="number" inputmode="numeric" min="0" placeholder="เช่น 1000 (ไม่มีให้เว้นว่าง)">
+<label for="ins">เบี้ยประกันชีวิตและสุขภาพต่อปี (บาท)</label>
+<input id="ins" type="number" inputmode="numeric" min="0" placeholder="เช่น 12000 (ไม่มีให้เว้นว่าง)">
+<div id="taxout" style="margin-top:10px"></div>
+</section>
+
 <div class="warn">ข้อมูลทั่วไปเพื่อการเรียนรู้ ไม่ใช่คำแนะนำทางการเงินส่วนบุคคล ผลตอบแทนในตัวอย่างเป็นเพียงสมมติฐาน ไม่ได้รับประกันผลจริง การลงทุนมีความเสี่ยง ผู้ลงทุนอาจสูญเงินต้น</div>
 </main>
 <script>
-var S={sal:0,exp:0,n:50,w:30,step:0};
+var S={sal:0,exp:0,n:50,w:30,step:0,p:0,i:0,c:[]};
 try{var raw=localStorage.getItem("fsg");if(raw){var o=JSON.parse(raw);if(o&&typeof o==="object")S=Object.assign(S,o);}}catch(e){}
 function save(){try{localStorage.setItem("fsg",JSON.stringify(S));}catch(e){}}
 function $(i){return document.getElementById(i)}
@@ -119,26 +136,10 @@ function stages(){
   h+='<div class="stage '+cls+'"><div class="num">'+(i<S.step?"✓":i+1)+'</div><div>'+body+'</div></div>';
  });
  if(S.step>=STAGES.length)h+='<p class="big">ครบทุกด่านแล้ว เก่งมาก เริ่มทำตามแผนได้เลย</p>';
- $("stages").innerHTML=h;
+ $("stages").innerHTML=h;bonus();
 }
-function render(){
- $("sal").value=S.sal||"";$("exp").value=S.exp||"";
- $("sn").value=S.n;$("sw").value=S.w;
- calc();stages();
-}
-function validate(){
- var e=$("err");
- if(S.sal<0||S.exp<0)e.textContent="กรอกตัวเลขที่ไม่ติดลบ";
- else if(S.exp>S.sal&&S.sal>0)e.textContent="รายจ่ายมากกว่ารายได้ ลองตรวจตัวเลขอีกครั้ง";
- else e.textContent="";
-}
-$("sal").oninput=function(){S.sal=Math.max(0,+this.value||0);validate();save();calc();stages()};
-$("exp").oninput=function(){S.exp=Math.max(0,+this.value||0);validate();save();calc();stages()};
-$("sn").oninput=function(){S.n=+this.value;if(S.n+S.w>100){S.w=100-S.n;$("sw").value=S.w}save();calc();stages()};
-$("sw").oninput=function(){S.w=+this.value;if(S.n+S.w>100){S.n=100-S.w;$("sn").value=S.n}save();calc();stages()};
-$("stages").onclick=function(ev){var b=ev.target.closest("button");if(!b)return;S.step=+b.getAttribute("data-i")+1;save();stages()};
-$("reset").onclick=function(){S={sal:0,exp:0,n:50,w:30,step:0};save();validate();render()};
-render();
-</script>
-</body>
-</html>
+function tax(n){var b=[[150000,0],[150000,0.05],[200000,0.1],[250000,0.15],[250000,0.2],[1000000,0.25],[3000000,0.3],[Infinity,0.35]],t=0;for(var k=0;k<b.length&&n>0;k++){var x=Math.min(n,b[k][0]);t+=x*b[k][1];n-=x}return t}
+function bonus(){
+ var inc=S.sal*12,o=$("taxout");
+ if(!(inc>0)){o.innerHTML='<p class="note">กรอกเงินเดือนด้านบนเพื่อประมาณภาษี</p>';return}
+ var base=Math.min(in
