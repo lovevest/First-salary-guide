@@ -3,72 +3,71 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Invest What You Love – เดโม</title>
+<title>LOVEVEST – เดโม</title>
 <style>
-:root{--bg:#f6f7fb;--card:#fff;--tx:#1b1e2e;--mut:#6b7185;--bd:#e3e6f0;--pri:#4f46e5;--pri-tx:#fff;--g:#10b981;--y:#f59e0b;--r:#d93a3a;--warn:#fff7e6;--warn-tx:#8a5a00;--bad:#fdecec;--bad-tx:#9b1c1c;--ok:#e6f7ef;--ok-tx:#0b5a3b;
-box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#12141f;--card:#1b1e2e;--tx:#eef0fa;--mut:#9aa1ba;--bd:#2c3044;--pri:#818cf8;--pri-tx:#12141f;--warn:#2d2410;--warn-tx:#f5c96a;--bad:#3a1717;--bad-tx:#f5b5b5;--ok:#12301f;--ok-tx:#9fe3c0}}
-:root[data-theme="dark"]{color-scheme:dark;--bg:#12141f;--card:#1b1e2e;--tx:#eef0fa;--mut:#9aa1ba;--bd:#2c3044;--pri:#818cf8;--pri-tx:#12141f;--warn:#2d2410;--warn-tx:#f5c96a;--bad:#3a1717;--bad-tx:#f5b5b5;--ok:#12301f;--ok-tx:#9fe3c0}
+:root{--bg:#eef1e8;--card:#f8f9f3;--tx:#17332a;--mut:#6d7c72;--bd:#dde3d3;--pri:#23553f;--pri-tx:#fff;--lime:#d9ebaa;--tg:#e1ebd2;--warn:#f8e9d2;--warn-tx:#8a5a22;--bad:#fdecec;--bad-tx:#9b1c1c;--ok:#e1ebd2;--ok-tx:#1d4a35;--hero:#1f4d3a;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#0f1a15;--card:#16241d;--tx:#e8f0e6;--mut:#9db0a4;--bd:#25382d;--pri:#7cc29b;--pri-tx:#0f1a15;--tg:#1f3a2b;--warn:#3a2d17;--warn-tx:#f2cf93;--bad:#3a1717;--bad-tx:#f5b5b5;--ok:#1f3a2b;--ok-tx:#bfe6cf}}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#0f1a15;--card:#16241d;--tx:#e8f0e6;--mut:#9db0a4;--bd:#25382d;--pri:#7cc29b;--pri-tx:#0f1a15;--tg:#1f3a2b;--warn:#3a2d17;--warn-tx:#f2cf93;--bad:#3a1717;--bad-tx:#f5b5b5;--ok:#1f3a2b;--ok-tx:#bfe6cf}
 html{scroll-padding-top:env(safe-area-inset-top,0px)}
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--tx);font-family:"Noto Sans Thai",-apple-system,"Segoe UI",sans-serif;line-height:1.6}
-main{max-width:560px;margin:0 auto;padding:12px 16px 90px}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:"Noto Sans Thai",-apple-system,"Segoe UI",sans-serif;line-height:1.55}
+main{max-width:560px;margin:0 auto;padding:10px 16px 110px}
 .demo{background:var(--warn);color:var(--warn-tx);border-radius:10px;padding:6px 12px;font-size:12px;font-weight:600}
-h1{font-size:21px;margin:10px 0 2px}h2{font-size:17px;margin:0 0 6px}
-.sub{color:var(--mut);font-size:14px;margin:0 0 12px}
-.steps{display:flex;gap:6px;margin:8px 0 12px}
-.steps i{flex:1;height:6px;border-radius:3px;background:var(--bd)}
-.steps i.on{background:var(--pri)}
-.card{background:var(--card);border:1px solid var(--bd);border-radius:16px;padding:16px;margin-bottom:12px}
-.note{font-size:13px;color:var(--mut)}
-.chips{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
-.chip{font:inherit;font-size:14px;font-weight:600;padding:8px 12px;border-radius:999px;border:1px solid var(--bd);background:var(--bg);color:var(--tx);cursor:pointer}
+.hd{display:flex;justify-content:space-between;align-items:center;margin:10px 0 6px}.hd b{font-size:20px;letter-spacing:.5px}
+h2{font-size:21px;margin:6px 0 2px}h3{font-size:16px;margin:12px 0 6px}
+.note{font-size:13px;color:var(--mut)}small{font-size:12px;color:var(--mut)}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:18px;padding:14px;margin:10px 0}
+.hero{background:var(--hero);color:#fff;border-radius:22px;padding:18px;margin:12px 0}.hero small,.hero p{color:#cfe3d6;margin:2px 0}.hero h1{font-size:34px;margin:2px 0}.hero h3{font-size:20px;margin:0 0 4px;color:#fff}
+.lime{font:inherit;font-size:14px;font-weight:700;padding:10px 16px;border-radius:12px;border:0;background:var(--lime);color:#1d3d2c;margin-top:10px;cursor:pointer}
+.ax{display:flex;justify-content:space-between;font-size:11px;color:#cfe3d6}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:10px}.two .card{margin:4px 0;display:flex;flex-direction:column;gap:2px}.two b{font-size:16px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0}
+.chip{font:inherit;font-size:14px;font-weight:600;padding:8px 13px;border-radius:999px;border:1px solid var(--bd);background:var(--tg);color:var(--tx);cursor:pointer}
 .chip.on{background:var(--pri);color:var(--pri-tx);border-color:var(--pri)}
-input[type=text],input[type=number]{width:100%;font-size:16px;padding:11px;border:1px solid var(--bd);border-radius:10px;background:var(--bg);color:var(--tx)}
+input[type=text],input[type=number]{width:100%;font-size:16px;padding:11px;border:1px solid var(--bd);border-radius:12px;background:var(--card);color:var(--tx)}
 input[type=range]{width:100%;accent-color:var(--pri)}
 label{display:block;font-size:14px;font-weight:600;margin:10px 0 4px}
-.b{border:1px solid var(--bd);border-radius:14px;padding:12px;margin-top:10px}
-.b .h{display:flex;justify-content:space-between;gap:8px;align-items:flex-start}
-.b b{font-size:15px}
-.pill{font-size:12px;font-weight:700;color:#fff;border-radius:8px;padding:2px 9px;white-space:nowrap}
-.b p{margin:4px 0;font-size:13px}
-.tags{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0}
-.tags span{font-size:12px;background:var(--bg);border:1px solid var(--bd);border-radius:8px;padding:1px 8px}
-button.main{font:inherit;font-size:14px;font-weight:700;padding:11px 16px;border-radius:12px;border:0;background:var(--pri);color:var(--pri-tx);cursor:pointer}
-button.main:disabled{opacity:.4;cursor:default}
-button.ghost{font:inherit;font-size:14px;font-weight:600;padding:11px 16px;border-radius:12px;border:1px solid var(--bd);background:transparent;color:var(--mut);cursor:pointer}
-.nav{display:flex;justify-content:space-between;gap:10px;margin:14px 0}
-.row{display:flex;justify-content:space-between;gap:12px;font-size:14px;margin:6px 0;align-items:center}
-.big{font-weight:700;text-align:right}
-.al{border-radius:12px;padding:10px 12px;font-size:13px;margin:8px 0}
+.sec{margin:14px 0 4px}
+.rw{display:flex;align-items:center;gap:12px;width:100%;text-align:left;font:inherit;color:var(--tx);background:var(--card);border:1px solid var(--bd);border-radius:16px;padding:10px 12px;margin:8px 0;cursor:pointer}
+.rw .rt{flex:1;display:flex;flex-direction:column}.rw .rt b{font-size:15px}
+.av{width:38px;height:38px;border-radius:12px;background:var(--tg);display:flex;align-items:center;justify-content:center;font-weight:800;color:var(--pri)}.av.lg{width:54px;height:54px;font-size:22px;border-radius:16px}
+.bh{display:flex;gap:12px;align-items:center;margin:8px 0}.bh h2{margin:0}
+.top{display:flex;justify-content:space-between;align-items:center}
+.bk{font:inherit;font-size:14px;font-weight:600;background:none;border:0;color:var(--mut);padding:6px 0;cursor:pointer}
+.tagbar{background:var(--tg);color:var(--ok-tx);border-radius:12px;padding:8px 12px;font-size:13px;font-weight:600;margin:8px 0}
+.tagg{background:var(--tg);color:var(--ok-tx);border-radius:999px;padding:3px 12px;font-size:12px;font-weight:700}
+.pill{font-size:12px;font-weight:700;color:#fff;border-radius:999px;padding:2px 10px;white-space:nowrap}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0}.tags span{font-size:12px;background:var(--tg);border-radius:8px;padding:1px 8px}
+button.main{font:inherit;font-size:15px;font-weight:700;padding:13px 16px;border-radius:14px;border:0;background:var(--pri);color:var(--pri-tx);cursor:pointer;width:100%;margin:8px 0}
+button.main:disabled{opacity:.4}
+button.ghost{font:inherit;font-size:13px;font-weight:600;padding:8px 12px;border-radius:12px;border:1px solid var(--bd);background:transparent;color:var(--mut);cursor:pointer}
+.row{display:flex;justify-content:space-between;gap:12px;font-size:14px;margin:6px 0;align-items:center}.big{font-weight:700;text-align:right}
+.al{border-radius:14px;padding:10px 12px;font-size:13px;margin:8px 0}
 .bad{background:var(--bad);color:var(--bad-tx)}.ok{background:var(--ok);color:var(--ok-tx)}.wn{background:var(--warn);color:var(--warn-tx)}
-table{width:100%;border-collapse:collapse;font-size:13px}
-th,td{text-align:right;padding:7px 4px;border-top:1px solid var(--bd)}
-th:first-child,td:first-child{text-align:left}
-.chk{display:flex;gap:8px;align-items:flex-start;font-size:14px;margin:8px 0;font-weight:400}
-.chk input{margin-top:5px;width:18px;height:18px}
-.les{background:var(--bg);border:1px dashed var(--bd);border-radius:12px;padding:10px 12px;font-size:13px;margin-top:10px}
+.wn.big2{padding:14px}.wn.big2 b{font-size:15px;display:block}
+table{width:100%;border-collapse:collapse;font-size:13px}th,td{text-align:right;padding:7px 4px;border-top:1px solid var(--bd)}th:first-child,td:first-child{text-align:left}
+.chk{display:flex;gap:8px;align-items:flex-start;font-size:14px;margin:8px 0;font-weight:400}.chk input{margin-top:5px;width:18px;height:18px}
+.les{background:var(--card);border:1px dashed var(--bd);border-radius:14px;padding:10px 12px;font-size:13px;margin-top:10px}
 svg{display:block}
-.bar{position:fixed;left:0;right:0;bottom:0;background:var(--card);border-top:1px solid var(--bd);padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px))}
-.bar div{max-width:560px;margin:0 auto;display:flex;justify-content:space-between;gap:10px;font-size:13px;align-items:center}
 .mt{height:8px;border-radius:4px;background:var(--bd);overflow:hidden;margin:3px 0 8px}.mt i{display:block;height:100%}
 details{margin:6px 0;font-size:13px}summary{cursor:pointer;color:var(--pri);font-weight:600}
-textarea{width:100%;font:inherit;font-size:13px;padding:10px;border:1px solid var(--bd);border-radius:10px;background:var(--bg);color:var(--tx);min-height:150px}
+textarea{width:100%;font:inherit;font-size:13px;padding:10px;border:1px solid var(--bd);border-radius:12px;background:var(--card);color:var(--tx);min-height:140px}
 .lg{display:flex;flex-wrap:wrap;gap:10px;font-size:12px;margin:4px 0}.lg i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:4px}
-.steps b{flex:1;font-size:11px;color:var(--mut);text-align:center;font-weight:600}.steps b.on{color:var(--pri)}
+.tabs{position:fixed;left:0;right:0;bottom:0;background:var(--card);border-top:1px solid var(--bd);display:flex;justify-content:space-around;padding:8px 8px calc(8px + env(safe-area-inset-bottom,0px))}
+.tabs button{flex:1;font:inherit;font-size:12px;font-weight:600;background:none;border:0;color:var(--mut);display:flex;flex-direction:column;align-items:center;gap:4px;cursor:pointer}
+.tabs button i{width:7px;height:7px;border-radius:50%;background:var(--bd)}
+.tabs button.on{color:var(--pri)}.tabs button.on i{background:var(--pri)}
 </style>
 </head>
 <body>
 <main>
 <div class="demo">เดโมเพื่อการศึกษา: ข้อมูลตัวอย่างทั้งหมด ไม่มีการซื้อขายจริง</div>
-<h1>Invest What You Love</h1>
-<p class="sub">เริ่มจากสิ่งที่ชอบ แล้วเข้าใจบริษัทและความเสี่ยงก่อนลงทุนทีละน้อย</p>
-<div class="steps" id="steps"></div>
-<div class="steps" id="stl" style="margin-top:-6px"></div>
+<div class="hd" id="hd"></div>
 <div id="v"></div>
 <div class="demo" style="margin-top:14px;font-weight:400">ข้อมูลทั่วไปเพื่อการเรียนรู้ ไม่ใช่คำแนะนำการลงทุนส่วนบุคคล คะแนนความเสี่ยง กราฟ และผลจำลองในเดโมเป็นตัวอย่างสมมติ ไม่ได้แนะนำหลักทรัพย์ใด การลงทุนมีความเสี่ยง ผู้ลงทุนอาจสูญเงินต้น</div>
 </main>
-<div class="bar"><div><span id="bs">ยังไม่ได้เลือกแบรนด์</span><span id="br"></span></div></div>
+<nav class="tabs" id="tabs"></nav>
 <script>
 var CATS=["เกม","โซเชียลและคอนเทนต์","กาแฟ","รถไฟฟ้า","สตรีมมิงและดนตรี","ท่องเที่ยว","แฟชั่นและกีฬา","เทคโนโลยี","บ้านและของใช้"];
 var BR=[
@@ -85,6 +84,7 @@ var BR=[
 {id:"ds",n:"Disney+",p:"Walt Disney",c:4,v:36,z:1,d:2,e:"ค่าสมัครสมาชิก เป็นส่วนหนึ่งของธุรกิจบันเทิงและสวนสนุกของ Disney"},
 {id:"ab",n:"Airbnb",p:"Airbnb",c:5,v:46,z:2,d:3,e:"ค่าธรรมเนียมจากการจองที่พัก ขึ้นกับการท่องเที่ยว"},
 {id:"nk",n:"Nike",p:"Nike",c:6,v:32,z:1,d:2,e:"ขายรองเท้าและเครื่องกีฬา"},
+{id:"ad",n:"Adidas",p:"adidas AG",c:6,v:34,z:1,d:2,e:"ขายรองเท้าและเครื่องกีฬา"},
 {id:"ik",n:"IKEA",p:"Inter IKEA Group",c:8,v:0,z:0,d:0,u:1,e:"ขายเฟอร์นิเจอร์และของแต่งบ้านผ่านร้านและช่องทางออนไลน์"},
 {id:"ap",n:"iPhone",p:"Apple",c:7,v:28,z:1,d:2,e:"ขายอุปกรณ์ บริการ และแอปในระบบของ Apple"}];
 BR.forEach(function(b){
@@ -92,13 +92,15 @@ BR.forEach(function(b){
  var vs=b.v<20?1:b.v<30?2:b.v<40?3:b.v<55?4:5,zs=[0,1,3,5][b.z],ds=[0,1,3,5][b.d];
  b.s={v:vs,z:zs,d:ds,t:Math.round((0.5*vs+0.2*zs+0.3*ds)*10)/10};
 });
-var REL={ig:"เจ้าของแบรนด์ (Meta เป็นเจ้าของ Instagram)",yt:"เจ้าของแบรนด์ (Alphabet เป็นเจ้าของ YouTube)",ps:"เจ้าของแบรนด์และผู้ผลิต (Sony)",xb:"เจ้าของแบรนด์ (Microsoft เป็นเจ้าของ Xbox)",nt:"เจ้าของแบรนด์และผู้ผลิต",sb:"เจ้าของแบรนด์และผู้ดำเนินกิจการ",ts:"เจ้าของแบรนด์และผู้ผลิต",by:"เจ้าของแบรนด์และผู้ผลิต",nf:"เจ้าของแบรนด์และผู้ให้บริการ",sp:"เจ้าของแบรนด์และผู้ให้บริการ",ds:"เจ้าของแบรนด์ (Disney+ ของ Walt Disney)",ab:"เจ้าของแบรนด์และแพลตฟอร์ม",nk:"เจ้าของแบรนด์",ap:"เจ้าของแบรนด์และผู้ออกแบบ",ik:"เจ้าของแบรนด์เป็นบริษัทเอกชน ไม่ได้จดทะเบียนในตลาดหลักทรัพย์ (ต้องตรวจสอบข้อมูลเพิ่มเติม)"};
-var R3={ig:["พึ่งรายได้โฆษณา","กฎเรื่องข้อมูลผู้ใช้","แข่งกับแพลตฟอร์มวิดีโอสั้น"],yt:["พึ่งรายได้โฆษณา","แข่งกับแพลตฟอร์มวิดีโออื่น","กฎระเบียบด้านการแข่งขันและเนื้อหา"],ps:["เกมฮิตขึ้นลงตามรอบเครื่อง","ค่าเงิน เพราะขายทั่วโลก","ธุรกิจอื่นของ Sony มีผลต่อราคา"],xb:["เป็นส่วนเล็กของธุรกิจรวม","แข่งขันสูง","ต้นทุนเนื้อหาและการซื้อกิจการ"],nt:["พึ่งเกมฮิตไม่กี่เกม","วงจรเครื่องเล่นรุ่นใหม่","ค่าเงินเยน"],sb:["ต้นทุนวัตถุดิบและแรงงาน","พึ่งกำลังซื้อผู้บริโภค","แข่งกับร้านกาแฟอื่น"],ts:["ราคาผันผวนสูง","แข่งขันรถไฟฟ้ารุนแรง","นโยบายรัฐและผู้บริหารมีผลมาก"],by:["แข่งขันด้านราคาสูง","กฎระเบียบการค้าระหว่างประเทศ","ค่าเงินและห่วงโซ่แบตเตอรี่"],nf:["ต้นทุนเนื้อหาสูง","ผู้ใช้ยกเลิกสมาชิกง่าย","คู่แข่งสตรีมมิงจำนวนมาก"],sp:["ค่าลิขสิทธิ์เพลง","กำไรบาง","คู่แข่งรายใหญ่"],ds:["ต้นทุนเนื้อหา","พึ่งการท่องเที่ยว (สวนสนุก)","แข่งขันสตรีมมิง"],ab:["พึ่งการท่องเที่ยว","กฎหมายท้องถิ่นเรื่องที่พัก","แข่งกับแพลตฟอร์มจองที่พัก"],nk:["กระแสแฟชั่นเปลี่ยน","ห่วงโซ่อุปทานและค่าแรง","แข่งกับแบรนด์กีฬาอื่น"],ap:["พึ่งยอดขายสินค้ารุ่นใหม่","กฎระเบียบแอปสโตร์","ห่วงโซ่อุปทานในเอเชีย"]};
+var REL={ig:"เจ้าของแบรนด์ (Meta เป็นเจ้าของ Instagram)",yt:"เจ้าของแบรนด์ (Alphabet เป็นเจ้าของ YouTube)",ps:"เจ้าของแบรนด์และผู้ผลิต (Sony)",xb:"เจ้าของแบรนด์ (Microsoft เป็นเจ้าของ Xbox)",nt:"เจ้าของแบรนด์และผู้ผลิต",sb:"เจ้าของแบรนด์และผู้ดำเนินกิจการ",ts:"เจ้าของแบรนด์และผู้ผลิต",by:"เจ้าของแบรนด์และผู้ผลิต",nf:"เจ้าของแบรนด์และผู้ให้บริการ",sp:"เจ้าของแบรนด์และผู้ให้บริการ",ds:"เจ้าของแบรนด์ (Disney+ ของ Walt Disney)",ab:"เจ้าของแบรนด์และแพลตฟอร์ม",nk:"เจ้าของแบรนด์",ap:"เจ้าของแบรนด์และผู้ออกแบบ",ad:"เจ้าของแบรนด์",ik:"เจ้าของแบรนด์เป็นบริษัทเอกชน ไม่ได้จดทะเบียนในตลาดหลักทรัพย์ (ต้องตรวจสอบข้อมูลเพิ่มเติม)"};
+ var R3={ig:["พึ่งรายได้โฆษณา","กฎเรื่องข้อมูลผู้ใช้","แข่งกับแพลตฟอร์มวิดีโอสั้น"],yt:["พึ่งรายได้โฆษณา","แข่งกับแพลตฟอร์มวิดีโออื่น","กฎระเบียบด้านการแข่งขันและเนื้อหา"],ps:["เกมฮิตขึ้นลงตามรอบเครื่อง","ค่าเงิน เพราะขายทั่วโลก","ธุรกิจอื่นของ Sony มีผลต่อราคา"],xb:["เป็นส่วนเล็กของธุรกิจรวม","แข่งขันสูง","ต้นทุนเนื้อหาและการซื้อกิจการ"],nt:["พึ่งเกมฮิตไม่กี่เกม","วงจรเครื่องเล่นรุ่นใหม่","ค่าเงินเยน"],sb:["ต้นทุนวัตถุดิบและแรงงาน","พึ่งกำลังซื้อผู้บริโภค","แข่งกับร้านกาแฟอื่น"],ts:["ราคาผันผวนสูง","แข่งขันรถไฟฟ้ารุนแรง","นโยบายรัฐและผู้บริหารมีผลมาก"],by:["แข่งขันด้านราคาสูง","กฎระเบียบการค้าระหว่างประเทศ","ค่าเงินและห่วงโซ่แบตเตอรี่"],nf:["ต้นทุนเนื้อหาสูง","ผู้ใช้ยกเลิกสมาชิกง่าย","คู่แข่งสตรีมมิงจำนวนมาก"],sp:["ค่าลิขสิทธิ์เพลง","กำไรบาง","คู่แข่งรายใหญ่"],ds:["ต้นทุนเนื้อหา","พึ่งการท่องเที่ยว (สวนสนุก)","แข่งขันสตรีมมิง"],ab:["พึ่งการท่องเที่ยว","กฎหมายท้องถิ่นเรื่องที่พัก","แข่งกับแพลตฟอร์มจองที่พัก"],nk:["กระแสแฟชั่นเปลี่ยน","ห่วงโซ่อุปทานและค่าแรง","แข่งกับแบรนด์กีฬาอื่น"],ad:["กระแสแฟชั่นเปลี่ยน","ห่วงโซ่อุปทานและค่าแรง","แข่งกับแบรนด์กีฬาอื่น"],ap:["พึ่งยอดขายสินค้ารุ่นใหม่","กฎระเบียบแอปสโตร์","ห่วงโซ่อุปทานในเอเชีย"]};
 var PAL=["#4f46e5","#10b981","#f59e0b","#d93a3a","#0ea5e9","#a855f7"];
 function RC(t){return t<2.5?"#10b981":t<3.5?"#f59e0b":"#d93a3a"}
-var S={hz:2,lt:1,cmp:[],watch:{},ask:"",step:0,cats:[],q:"",pick:[],amt:{},total:1000,th:50,freq:"m",mo:12,ack:[false,false,false],done:false};
-try{var raw=localStorage.getItem("iwyl4");if(raw){var o=JSON.parse(raw);if(o&&typeof o==="object")S=Object.assign(S,o);}}catch(e){}
-function save(){try{localStorage.setItem("iwyl4",JSON.stringify(S));}catch(e){}}
+
+var HZ=["น้อยกว่า 1 ปี","1-3 ปี","3-5 ปี","มากกว่า 5 ปี"],LT=["รับขาดทุนได้น้อย","ปานกลาง","รับขาดทุนได้มาก"];
+var S={tab:0,detail:"",hz:2,lt:1,cmp:[],watch:{},ask:"",cats:[],q:"",pick:[],amt:{},total:1000,th:50,freq:"m",mo:12,ack:[false,false,false],done:false};
+try{var raw=localStorage.getItem("iwyl5");if(raw){var o=JSON.parse(raw);if(o&&typeof o==="object")S=Object.assign(S,o);}}catch(e){}
+function save(){try{localStorage.setItem("iwyl5",JSON.stringify(S));}catch(e){}}
 function $(i){return document.getElementById(i)}
 function fmt(x){return Math.round(x).toLocaleString("th-TH")}
 function B(id){return BR.filter(function(b){return b.id===id})[0]}
@@ -146,27 +148,6 @@ function donut(){
   lg+='<span><i style="background:'+col+'"></i>'+B(id).n+' '+Math.round(f*100)+'%</span>';off+=f});
  return '<div style="display:flex;gap:12px;align-items:center"><svg width="100" height="100" viewBox="0 0 100 100">'+seg+'</svg><div class="lg" style="flex-direction:column">'+lg+'</div></div>';
 }
-function bar(){
- var n=S.pick.length,rk=risk();
- $("bs").textContent=n?("พอร์ตธีม "+n+" แบรนด์ · "+fmt(sum())+" บาท/เดือน"):"ยังไม่ได้เลือกแบรนด์";
- $("br").innerHTML=n&&sum()>0?'<span class="pill" style="background:'+RC(rk)+'">เสี่ยง '+rk.toFixed(1)+'/5</span>':"";
-}
-var LB=["เลือกความชอบ","บริษัท","พอร์ต","DCA","ยืนยัน"];
-function steps(){var h="",l="";for(var i=0;i<5;i++){h+='<i class="'+(i<=S.step?"on":"")+'"></i>';l+='<b class="'+(i<=S.step?"on":"")+'">'+LB[i]+'</b>'}$("steps").innerHTML=h;$("stl").innerHTML=l}
-function nav(back,next,label,dis){
- return '<div class="nav">'+(back?'<button class="ghost" data-go="'+(S.step-1)+'">ย้อนกลับ</button>':'<span></span>')+(next?'<button class="main" data-go="'+(S.step+1)+'"'+(dis?' disabled':'')+'>'+label+'</button>':'')+'</div>';
-}
-function chipsFor(list){return list.map(function(x){return '<button class="chip'+(S.cats.indexOf(x[1])>-1?" on":"")+'" data-cat="'+x[1]+'">'+x[0]+'</button>'}).join("")}
-function s1(){
- var h='<div class="card"><h2>1. คุณชอบอะไร</h2><p class="note" style="margin:0">เลือกหมวด หรือพิมพ์ชื่อแบรนด์ สินค้า หรือเกมที่ใช้อยู่ เช่น Instagram หรือ iPhone</p><div class="chips">'+
- CATS.map(function(c,i){return '<button class="chip'+(S.cats.indexOf(i)>-1?" on":"")+'" data-cat="'+i+'">'+c+'</button>'}).join("")+
- '</div><input type="text" id="q" placeholder="พิมพ์ชื่อแบรนด์" value="'+S.q.replace(/"/g,"")+'"><p class="note">พบ '+list().length+' แบรนด์ในข้อมูลตัวอย่าง (ทั้งหมด '+BR.length+' แบรนด์)</p>'+
- '<details><summary>ยังไม่รู้ว่าชอบอะไร? ลองตอบ 3 ข้อ</summary><label>ใช้แอปอะไรบ่อยที่สุด</label><div class="chips">'+chipsFor([["โซเชียล",1],["สตรีมมิงและเพลง",4],["เกม",0],["จองที่พัก",5]])+'</div><label>ซื้ออะไรเป็นประจำ</label><div class="chips">'+chipsFor([["กาแฟ",2],["ของใช้ในบ้าน",8],["เสื้อผ้ากีฬา",6]])+'</div><label>ใช้อุปกรณ์หรือยานพาหนะแบบไหน</label><div class="chips">'+chipsFor([["อุปกรณ์เทคโนโลยี",7],["รถไฟฟ้า",3]])+'</div></details></div>';
- h+='<div class="card"><h2>โปรไฟล์การลงทุนของคุณ</h2><p class="note" style="margin:0">ใช้เทียบกับคะแนนความเสี่ยงเท่านั้น ไม่ใช่การแนะนำให้ซื้อ</p><label for="tot">งบลงทุนรวมต่อเดือน (บาท)</label><input type="number" id="tot" inputmode="numeric" min="0" value="'+(S.total||"")+'"><label>ระยะเวลาลงทุน</label><div class="chips">'+
- ["น้อยกว่า 1 ปี","1-3 ปี","3-5 ปี","มากกว่า 5 ปี"].map(function(x,i){return '<button class="chip'+(S.hz===i?" on":"")+'" data-hz="'+i+'">'+x+'</button>'}).join("")+'</div><label>รับการขาดทุนได้แค่ไหน</label><div class="chips">'+
- ["น้อย","ปานกลาง","มาก"].map(function(x,i){return '<button class="chip'+(S.lt===i?" on":"")+'" data-lt="'+i+'">'+x+'</button>'}).join("")+'</div></div>';
- return h+nav(0,1,"ไปดูบริษัทที่เกี่ยวข้อง");
-}
 function bars(b){
  if(b.u)return"";
  function r(l,v,m){return '<div class="row" style="margin:2px 0"><span>'+l+'</span><span>'+m+'</span></div><div class="mt"><i style="width:'+v*20+'%;background:'+RC(v)+'"></i></div>'}
@@ -191,98 +172,120 @@ function watchHtml(){
  var ids=Object.keys(S.watch);if(!ids.length)return"";
  return '<div class="card"><h2>รายการติดตาม</h2>'+ids.map(function(id){var b=B(id),k=S.watch[id];return '<div class="row"><span>'+b.n+' <span class="pill" style="background:'+(k==="ok"?"#10b981":"#f59e0b")+'">'+(k==="ok"?"เข้าใจธุรกิจแล้ว":"ยังต้องเรียนรู้")+'</span></span><button class="ghost" data-wr="'+id+'">เอาออก</button></div>'+(k==="learn"?'<p class="note">ลองอ่าน “หาเงินอย่างไร” และความเสี่ยง 3 ข้อของ '+b.n+' อีกครั้ง ก่อนตัดสินใจ</p>':'')}).join("")+'</div>';
 }
-function s2(){
- var h='';
- if(S.ask){var ab=B(S.ask);h+='<div class="card"><div class="al wn"><b>ก่อนเพิ่ม '+ab.n+' ในรายการติดตาม</b><br>ฉันชอบสินค้านี้ หรือเข้าใจธุรกิจนี้แล้ว?</div><div class="nav"><button class="main" data-w="ok|'+ab.id+'">เข้าใจธุรกิจนี้แล้ว</button><button class="ghost" data-w="learn|'+ab.id+'">แค่ชอบสินค้า ขอเรียนรู้เพิ่ม</button></div></div>'}
- h+='<div class="card"><h2>2. แบรนด์นี้เป็นของบริษัทไหน</h2><p class="note" style="margin:0">ข้อมูลตัวอย่างของทีม ต้องตรวจสอบข้อมูลเพิ่มเติมก่อนใช้จริง เลือกใส่พอร์ตจำลองได้ไม่เกิน 6 แบรนด์</p>';
- var L=list();
- if(!L.length)h+='<p class="note">ไม่พบแบรนด์ ลองย้อนกลับไปเลือกหมวดอื่น</p>';
- L.forEach(function(b){
-  var on=S.pick.indexOf(b.id)>-1,cm=S.cmp.indexOf(b.id)>-1,w=!!S.watch[b.id],sv=b.u?null:suit(b);
-  h+='<div class="b"><div class="h"><b>'+b.n+'</b>'+(b.u?'<span class="pill" style="background:#6b7185">ไม่จดทะเบียน</span>':'<span class="pill" style="background:'+RC(b.s.t)+'">ความผันผวน '+b.s.t.toFixed(1)+'/5</span>')+'</div>'+
-  '<p class="note">ชอบ “'+CATS[b.c]+'” → '+b.n+' → '+b.p+' → '+(b.u?'ไม่มีหลักทรัพย์ให้ซื้อโดยตรง':'ตัวเลือกลงทุนที่เกี่ยวข้อง')+'</p>'+
-  '<p><b style="display:inline">ความสัมพันธ์:</b> '+REL[b.id]+'</p><p><b style="display:inline">หาเงินอย่างไร:</b> '+b.e+'</p>';
-  if(b.u)h+='<div class="al wn">บริษัทเจ้าของแบรนด์นี้ไม่ได้จดทะเบียนในตลาดหลักทรัพย์ จึงไม่มีหุ้นให้ซื้อโดยตรง แอปไม่แนะนำหุ้นของคู่แข่งแทน</div>';
-  else h+='<div class="tags"><span>หุ้นรายตัว</span><span>DR/DRx (ถ้ามี)</span><span>กองทุนธีม</span></div><p class="note">สัญลักษณ์หลักทรัพย์และช่องทางซื้อ: ต้องตรวจสอบข้อมูลเพิ่มเติม (ข้อมูลตัวอย่าง)</p><p><b style="display:inline">ความเสี่ยงสำคัญ 3 ข้อ:</b></p><ul style="margin:2px 0 6px;padding-left:20px;font-size:13px">'+R3[b.id].map(function(x){return '<li>'+x+'</li>'}).join("")+'</ul>'+bars(b)+
-  '<div class="row" style="align-items:flex-start"><span>ความตรงกับความสนใจ</span><span class="big" style="font-weight:600">'+matchTxt(b)+'</span></div><div class="al '+sv[0]+'"><b>ความเหมาะสมกับโปรไฟล์:</b> '+sv[1]+'</div><div class="row">'+spark(b)+'<span class="note">กราฟจำลอง</span></div>';
-  h+='<p class="note">แหล่งข้อมูล: ข้อมูลตัวอย่างของทีม · วันที่ตรวจสอบ: ยังไม่ได้ตรวจสอบ</p><div class="chips"><button class="'+(cm?"main":"chip")+'" data-cmp="'+b.id+'">'+(cm?"อยู่ในการเปรียบเทียบ":"เปรียบเทียบ")+'</button><button class="'+(w?"main":"chip")+'" data-watch="'+b.id+'">'+(w?"ติดตามแล้ว":"เพิ่มในรายการติดตาม")+'</button>'+(b.u?'':'<button class="'+(on?"main":"chip")+'" data-pick="'+b.id+'">'+(on?"อยู่ในพอร์ตจำลอง":"ใส่พอร์ตจำลอง")+'</button>')+'</div></div>';
- });
- h+='<div class="les">ข้อมูลทั่วไป: DR/DRx ซื้อขายในตลาดหลักทรัพย์ไทยด้วยเงินบาทผ่านบัญชีหุ้นเดิม และ DRx สั่งซื้อเป็นจำนวนบาทได้ ควรตรวจกับโบรกเกอร์ว่ามีให้ซื้อหรือไม่ สีและคะแนนบอกระดับความผันผวน ไม่ได้รับประกันว่าจะไม่ขาดทุน</div></div>';
- return h+cmpHtml()+watchHtml()+nav(1,1,"สร้างพอร์ตจำลอง ("+S.pick.length+")",S.pick.length===0);
-}
-function s3(){
- var h='<div class="card"><h2>3. สร้างพอร์ตธีม</h2><label for="tot">เงินลงทุนรวมต่อเดือน (บาท)</label><input type="number" id="tot" inputmode="numeric" min="0" value="'+(S.total||"")+'">';
- if(!S.pick.length)h+='<p class="note">ยังไม่ได้เลือกแบรนด์ ย้อนกลับไปเพิ่มก่อน</p>';
- S.pick.forEach(function(id){var b=B(id);h+='<label for="a-'+id+'">'+b.n+' ('+b.p+') บาทต่อเดือน</label><input type="number" id="a-'+id+'" data-a="'+id+'" inputmode="numeric" min="0" value="'+(S.amt[id]||"")+'">'});
- h+='<div id="pf"></div><label for="th">เกณฑ์เตือนเมื่อธีมเกิน <span id="thv">'+S.th+'%</span> ของเงินลงทุนรวม</label><input type="range" id="th" min="10" max="100" step="5" value="'+S.th+'"><div id="g"></div><div class="les">บทเรียนสั้น: ส่วนของเงินลงทุนรวมที่ไม่ได้อยู่ในธีม ควรเก็บไว้ที่ตัวกลาง เช่น กองทุนที่กระจายไปหลายบริษัท เพื่อไม่ให้พอร์ตผูกกับสิ่งที่ชอบทั้งหมด</div></div>';
- return h+nav(1,1,"ไปจำลอง DCA",!(sum()>0));
-}
-function guard(){
- var el=$("g"),pf=$("pf");if(!el)return;
- var t=sum();
- if(!(t>0)){pf.innerHTML="";el.innerHTML='<p class="note">ใส่จำนวนเงินของแต่ละแบรนด์เพื่อดูคะแนนความเสี่ยงรวม</p>';bar();return}
- var rk=risk(),core=Math.max(0,S.total-t);
- pf.innerHTML=donut()+'<div class="row"><span>เงินในพอร์ตธีม</span><span class="big">'+fmt(t)+' บาท</span></div><div class="row"><span>ส่วนที่เหลือเป็นตัวกลาง</span><span class="big">'+fmt(core)+' บาท</span></div><div class="row"><span>คะแนนความเสี่ยงรวม</span><span class="pill" style="background:'+RC(rk)+'">'+rk.toFixed(1)+'/5</span></div>';
- el.innerHTML=wHtml();bar();
-}
 function scen(r){return [["ตลาดแย่",-8*r,"#d93a3a"],["กลาง ๆ",3,"#f59e0b"],["ตลาดดี",5*r,"#10b981"]]}
-function sim(){
- var el=$("sim");if(!el)return;
- var per=S.freq==="w"?4:1,t=sum();
- if(!(t>0)){el.innerHTML='<p class="note">ยังไม่มีจำนวนเงินในพอร์ต ย้อนกลับไปใส่ก่อน</p>';return}
- var each=t/per,inv=t*S.mo,r=risk(),SC=scen(r),W=300,H=120,all=[];
- var lines=SC.map(function(s){var a=[];for(var m=0;m<=S.mo;m++)a.push(t*m*(1+s[1]/100*m/S.mo));all=all.concat(a);return a});
- var base=[];for(var m=0;m<=S.mo;m++)base.push(t*m);all=all.concat(base);
- var mn=Math.min.apply(null,all),mx=Math.max.apply(null,all),d=(mx-mn)||1;
- function pl(a,c,dash){return '<polyline fill="none" stroke="'+c+'" stroke-width="2"'+(dash?' stroke-dasharray="4 3"':'')+' points="'+a.map(function(y,i){return (i/S.mo*W).toFixed(1)+","+(H-4-((y-mn)/d)*(H-8)).toFixed(1)}).join(" ")+'"/>'}
- var h='<svg width="100%" viewBox="0 0 '+W+' '+H+'">'+pl(base,"#9aa1ba",1)+lines.map(function(a,i){return pl(a,SC[i][2])}).join("")+'</svg><div class="lg"><span><i style="background:#9aa1ba"></i>เงินต้นสะสม</span>'+SC.map(function(s){return '<span><i style="background:'+s[2]+'"></i>'+s[0]+'</span>'}).join("")+'</div>';
- h+='<div class="row"><span>ลงครั้งละ</span><span class="big">'+fmt(each)+' บาท</span></div><div class="row"><span>เงินต้นรวม</span><span class="big">'+fmt(inv)+' บาท</span></div><table><tr><th>สถานการณ์สมมติ</th><th>ผลเทียบเงินต้น</th><th>มูลค่าปลายทาง</th></tr>';
- SC.forEach(function(x){h+='<tr><td>'+x[0]+'</td><td>'+(x[1]>0?"+":"")+x[1].toFixed(0)+'%</td><td>'+fmt(inv*(1+x[1]/100))+'</td></tr>'});
- el.innerHTML=h+'</table><p class="note">จำลองตามคะแนนความเสี่ยงรวม '+r.toFixed(1)+'/5 ไม่ใช่การคาดการณ์ผลตอบแทน</p>';
-}
-function s4(){
- var t=sum();
- var h='<div class="card"><h2>4. ลองจำลอง DCA</h2><div class="chips"><button class="chip'+(S.freq==="m"?" on":"")+'" data-f="m">รายเดือน</button><button class="chip'+(S.freq==="w"?" on":"")+'" data-f="w">รายสัปดาห์</button></div>'+
- '<label for="mo">ลงต่อเนื่อง <span id="mov">'+S.mo+'</span> เดือน</label><input type="range" id="mo" min="6" max="36" value="'+S.mo+'"><div id="sim"></div>'+
- '<div class="les">บทเรียนสั้น: DCA คือทยอยลงเท่า ๆ กันสม่ำเสมอ ช่วยลดปัญหาเลือกจังหวะซื้อ แต่ไม่ได้ทำให้ไม่ขาดทุน ดูเส้นสีแดงว่าถ้าตลาดแย่ มูลค่าอาจต่ำกว่าเงินต้นได้</div></div>';
- return h+nav(1,1,"ไปขั้นสุดท้าย",!(t>0));
-}
 function summary(){
- var a=shares(),rk=risk(),L=["แผนจำลอง Invest What You Love (เดโมเพื่อการศึกษา ไม่ใช่คำแนะนำการลงทุน)"];
+ var a=shares(),rk=risk(),L=["แผนจำลอง LOVEVEST (เดโมเพื่อการศึกษา ไม่ใช่คำแนะนำการลงทุน)"];
  S.pick.forEach(function(id){L.push("- "+B(id).n+" ("+B(id).p+"): "+fmt(+S.amt[id]||0)+" บาทต่อเดือน")});
  L.push("รวมพอร์ตธีม "+fmt(a.t)+" บาท จากเงินลงทุนรวม "+fmt(S.total)+" บาทต่อเดือน");
  L.push("คะแนนความเสี่ยงรวม (จำลอง) "+rk.toFixed(1)+"/5");
  L.push("ลงแบบ DCA "+(S.freq==="w"?"รายสัปดาห์":"รายเดือน")+" นาน "+S.mo+" เดือน");
  return L.join("\n");
 }
-function s5(){
- var ok=S.ack[0]&&S.ack[1]&&S.ack[2],w=warnings();
- var h='<div class="card"><h2>5. “ชอบ ไม่ได้แปลว่ากำไร”</h2><p class="note" style="margin:0">สิ่งที่ระบบสังเกตจากพอร์ตของคุณ</p>'+(w.length?w.map(function(x){return '<div class="al '+x[0]+'">'+x[1]+'</div>'}).join(""):'<div class="al ok">ไม่พบสัญญาณกระจุกตัวเกินเกณฑ์ที่ตั้งไว้</div>')+'<p class="note">ติ๊กให้ครบก่อนยืนยันแผน</p>';
- ["ฉันรู้ว่าการชอบแบรนด์ ไม่ได้รับประกันว่าราคาจะขึ้น","ฉันรู้ว่ามูลค่าลงทุนอาจลดลงและอาจขาดทุนเงินต้น","ฉันใช้เฉพาะเงินเย็นที่ไม่จำเป็นต้องใช้ในระยะสั้น"].forEach(function(t,i){
-  h+='<label class="chk"><input type="checkbox" data-k="'+i+'"'+(S.ack[i]?" checked":"")+'>'+t+'</label>'});
- h+='<div class="al wn">เดโมนี้ไม่ซื้อขายจริง ในแอปจริงจะเชื่อมกับโบรกเกอร์หรือบริษัทจัดการกองทุนที่มีใบอนุญาต</div>';
- h+='<button class="main" id="conf"'+(ok?"":" disabled")+'>ยืนยันแผน (เดโม)</button>';
- if(S.done)h+='<div class="al ok" style="margin-top:10px">บันทึกแผนจำลองแล้ว (ไม่มีการซื้อขายจริง) คัดลอกสรุปด้านล่างไปแชร์หรือเก็บไว้ได้</div><textarea readonly>'+summary()+'</textarea>';
- h+='<div class="les">บทเรียนสั้น: อคติด้านความชอบ (affinity bias) คือการมองบริษัทที่ตัวเองชอบดีเกินจริง วิธีป้องกันคือเทียบข้อมูลบริษัทกับตัวเลขเสมอ และกระจายเงินออกไปนอกธีม</div></div>';
- return h+nav(1,0);
+
+function catChips(){return CATS.map(function(c,i){return '<button class="chip'+(S.cats.indexOf(i)>-1?" on":"")+'" data-cat="'+i+'">'+c+'</button>'}).join("")}
+function chipsFor(list){return list.map(function(x){return '<button class="chip'+(S.cats.indexOf(x[1])>-1?" on":"")+'" data-cat="'+x[1]+'">'+x[0]+'</button>'}).join("")}
+function row(b){return '<button class="rw" data-open="'+b.id+'"><span class="av">'+b.n.charAt(0)+'</span><span class="rt"><b>'+b.n+'</b><small>'+CATS[b.c]+' · ข้อมูลตัวอย่าง'+(b.u?' · ไม่จดทะเบียน':'')+'</small></span><span>›</span></button>'}
+function head(){var t=sum(),rk=risk();return '<b>LOVEVEST</b>'+(t>0?'<button class="ghost" data-tab="3"><span class="pill" style="background:'+RC(rk)+'">พอร์ต เสี่ยง '+rk.toFixed(1)+'/5</span></button>':'<small>Invest What You Love</small>')}
+function tabs(){var T=["หน้าแรก","ค้นหา","เปรียบเทียบ","พอร์ต"];$("tabs").innerHTML=T.map(function(x,i){return '<button data-tab="'+i+'" class="'+(S.tab===i&&!S.detail?"on":"")+'"><i></i>'+x+'</button>'}).join("")}
+function profileCard(){return '<div class="card"><b>โปรไฟล์การลงทุนของคุณ</b><p class="note" style="margin:2px 0">ใช้เทียบกับคะแนนความเสี่ยงเท่านั้น ไม่ใช่การแนะนำให้ซื้อ</p><label for="tot">งบลงทุนรวมต่อเดือน (บาท)</label><input type="number" id="tot" inputmode="numeric" min="0" value="'+(S.total||"")+'"><label>ระยะเวลาลงทุน</label><div class="chips">'+HZ.map(function(x,i){return '<button class="chip'+(S.hz===i?" on":"")+'" data-hz="'+i+'">'+x+'</button>'}).join("")+'</div><label>รับการขาดทุนได้แค่ไหน</label><div class="chips">'+LT.map(function(x,i){return '<button class="chip'+(S.lt===i?" on":"")+'" data-lt="'+i+'">'+x+'</button>'}).join("")+'</div></div>'}
+function home(){
+ var L=list().slice(0,4);
+ return '<h2>สวัสดี</h2><p class="note" style="margin:0">วันนี้อยากรู้จักแบรนด์ไหน?</p><div class="hero"><h3>รู้จักก่อน ลงทุนทีหลัง</h3><p>เลือกแบรนด์ที่ใช้ แล้วค่อยศึกษาบริษัท</p><button class="lime" data-tab="1">เริ่มสำรวจแบรนด์ →</button></div>'+
+ '<div class="sec"><b>หมวดที่คุณสนใจ</b></div><div class="chips">'+catChips()+'</div>'+
+ '<details><summary>ยังไม่รู้ว่าชอบอะไร? ลองตอบ 3 ข้อ</summary><label>ใช้แอปอะไรบ่อยที่สุด</label><div class="chips">'+chipsFor([["โซเชียล",1],["สตรีมมิงและเพลง",4],["เกม",0],["จองที่พัก",5]])+'</div><label>ซื้ออะไรเป็นประจำ</label><div class="chips">'+chipsFor([["กาแฟ",2],["ของใช้ในบ้าน",8],["เสื้อผ้ากีฬา",6]])+'</div><label>ใช้อุปกรณ์หรือยานพาหนะแบบไหน</label><div class="chips">'+chipsFor([["อุปกรณ์เทคโนโลยี",7],["รถไฟฟ้า",3]])+'</div></details>'+
+ '<div class="sec"><b>แบรนด์ใกล้ตัว</b></div>'+(L.length?L.map(row).join(""):'<p class="note">ไม่พบแบรนด์ ลองเลือกหมวดอื่น</p>')+profileCard()
+}
+function search(){
+ var L=list();
+ return '<h2>ค้นหาแบรนด์</h2><input type="text" id="q" placeholder="พิมพ์ชื่อแบรนด์ สินค้า หรือเกม เช่น Instagram" value="'+S.q.replace(/"/g,"")+'"><div class="chips">'+catChips()+'</div><p class="note">พบ '+L.length+' จาก '+BR.length+' แบรนด์ในข้อมูลตัวอย่าง</p>'+L.map(row).join("")+(L.length?'':'<p class="note">ไม่พบแบรนด์</p>')
+}
+function detail(){
+ var b=B(S.detail),h='';
+ if(S.ask){var ab=B(S.ask);h+='<div class="card"><div class="al wn"><b>ก่อนเพิ่ม '+ab.n+' ในรายการติดตาม</b><br>ฉันชอบสินค้านี้ หรือเข้าใจธุรกิจนี้แล้ว?</div><button class="main" data-w="ok|'+ab.id+'">เข้าใจธุรกิจนี้แล้ว</button><button class="main" style="background:transparent;color:var(--mut);border:1px solid var(--bd)" data-w="learn|'+ab.id+'">แค่ชอบสินค้า ขอเรียนรู้เพิ่ม</button></div>'}
+ var on=S.pick.indexOf(b.id)>-1,cm=S.cmp.indexOf(b.id)>-1,w=!!S.watch[b.id];
+ h+='<div class="top"><button class="bk" data-back="1">‹ กลับ</button><small>ข้อมูลแบรนด์</small></div><div class="bh"><span class="av lg">'+b.n.charAt(0)+'</span><div><h2>'+b.n+'</h2><small>'+CATS[b.c]+' · ตัวอย่าง</small></div></div>'+
+ '<div class="tagbar">ความสนใจของคุณ: '+matchTxt(b)+'</div>';
+ if(!b.u){
+  var sv=suit(b);
+  h+='<h3>ชอบแบรนด์นี้ แล้วเหมาะกับเราไหม?</h3><div class="card"><div class="row"><small>โปรไฟล์ของคุณ</small><span class="big">'+HZ[S.hz]+' · '+LT[S.lt]+'</span></div></div>'+
+  (sv[0]==="bad"?'<div class="al wn big2"><b>ควรศึกษาเพิ่มเติม</b>เสี่ยงสูงกว่าระดับที่คุณระบุไว้ หรือเวลาลงทุนสั้นเกินไป<br><small>ผลจากคะแนนสมมติ ไม่ใช่คำแนะนำลงทุน</small></div>':'<div class="al ok big2"><b>อยู่ในระดับที่คุณระบุไว้</b>แต่ยังไม่ได้แปลว่าเหมาะหรือควรซื้อ</div>')+
+  '<p class="note">ระดับความเสี่ยงใช้ข้อมูลสมมติ เพื่อการทดลอง</p><button class="main" data-try="'+b.id+'">ลองพอร์ตจำลอง →</button>';
+ }
+ h+='<div class="card"><b>เกี่ยวกับบริษัท</b><p class="note" style="margin:6px 0">ชอบ “'+CATS[b.c]+'” → '+b.n+' → '+b.p+' → '+(b.u?'ไม่มีหลักทรัพย์ให้ซื้อโดยตรง':'ตัวเลือกลงทุนที่เกี่ยวข้อง')+'</p><p style="margin:4px 0"><b>ความสัมพันธ์:</b> '+REL[b.id]+'</p><p style="margin:4px 0"><b>หาเงินอย่างไร:</b> '+b.e+'</p>';
+ if(b.u)h+='<div class="al wn">บริษัทเจ้าของแบรนด์นี้ไม่ได้จดทะเบียนในตลาดหลักทรัพย์ จึงไม่มีหุ้นให้ซื้อโดยตรง แอปไม่แนะนำหุ้นของคู่แข่งแทน</div>';
+ else h+='<div class="tags"><span>หุ้นรายตัว</span><span>DR/DRx (ถ้ามี)</span><span>กองทุนธีม</span></div><p class="note">สัญลักษณ์หลักทรัพย์และช่องทางซื้อ: ต้องตรวจสอบข้อมูลเพิ่มเติม (ข้อมูลตัวอย่าง)</p><p style="margin:6px 0 2px"><b>ความเสี่ยงสำคัญ 3 ข้อ</b></p><ul style="margin:2px 0 6px;padding-left:20px;font-size:13px">'+R3[b.id].map(function(x){return '<li>'+x+'</li>'}).join("")+'</ul><div class="row"><span>คะแนนความผันผวน</span><span class="pill" style="background:'+RC(b.s.t)+'">'+b.s.t.toFixed(1)+'/5</span></div>'+bars(b)+'<div class="row">'+spark(b)+'<small>กราฟจำลอง</small></div><div class="al ok">สีและคะแนนบอกระดับความผันผวน ไม่ได้รับประกันว่าจะไม่ขาดทุน</div>';
+ h+='<p class="note">แหล่งข้อมูล: ข้อมูลตัวอย่างของทีม · วันที่ตรวจสอบ: ยังไม่ได้ตรวจสอบ</p><div class="chips"><button class="chip'+(cm?" on":"")+'" data-cmp="'+b.id+'">'+(cm?"อยู่ในการเปรียบเทียบ":"เปรียบเทียบ")+'</button><button class="chip'+(w?" on":"")+'" data-watch="'+b.id+'">'+(w?"ติดตามแล้ว":"เพิ่มในรายการติดตาม")+'</button>'+(b.u?'':'<button class="chip'+(on?" on":"")+'" data-pick="'+b.id+'">'+(on?"อยู่ในพอร์ตจำลอง":"ใส่พอร์ตจำลอง")+'</button>')+'</div></div>';
+ return h;
+}
+function compareTab(){
+ var h='<h2>เปรียบเทียบ</h2>';
+ if(S.cmp.length<2)h+='<div class="card note">เลือก “เปรียบเทียบ” จากหน้าแบรนด์อย่างน้อย 2 ตัวเลือก (ไม่เกิน 3) เพื่อดูบริษัท ความเสี่ยง และข้อเตือนเรื่องบริษัทแม่หรือหมวดเดียวกัน</div>';
+ if(S.cmp.length)h+='<div class="card"><b>ที่เลือกไว้</b>'+S.cmp.map(function(id){return '<div class="row"><span>'+B(id).n+'</span><button class="ghost" data-cmp="'+id+'">เอาออก</button></div>'}).join("")+'</div>';
+ return h+cmpHtml()+watchHtml();
+}
+function hero(){
+ var el=$("hero");if(!el)return;
+ var t=sum(),inv=t*S.mo;
+ if(!(t>0)){el.innerHTML='<div class="hero"><small>มูลค่าพอร์ตปลายงวด</small><h1>0.00</h1><p>เพิ่มแบรนด์จากหน้าแบรนด์ แล้วกำหนดเงินต่อเดือน</p></div>';return}
+ var W=300,H=80,pts=[];for(var m=0;m<=S.mo;m++)pts.push((m/S.mo*W).toFixed(1)+","+(H-4-(m/S.mo)*(H-10)).toFixed(1));
+ el.innerHTML='<div class="hero"><small>มูลค่าพอร์ตปลายงวด</small><h1>'+inv.toLocaleString("th-TH",{minimumFractionDigits:2,maximumFractionDigits:2})+'</h1><small>บาท / ตลาดทรงตัว 0% ต่อเดือน</small><svg width="100%" viewBox="0 0 '+W+' '+H+'"><polyline fill="none" stroke="#d9ebaa" stroke-width="2.5" points="'+pts.join(" ")+'"/></svg><div class="ax"><span>เดือน 1</span><span>เดือน '+S.mo+'</span></div></div>'+
+ '<div class="two"><div class="card"><small>เงินสะสม</small><b>'+fmt(inv)+' บาท</b></div><div class="card"><small>ส่วนต่างสมมติ</small><b>0.00 บาท</b></div></div><div class="two"><div class="card"><small>ลงทุนรายเดือน</small><b>'+fmt(t)+' บาท</b></div><div class="card"><small>ระยะเวลา</small><b>'+S.mo+' เดือน</b></div></div><p class="note">กราฟแสดงเงินต้น ไม่ใช่ผลตอบแทนที่ได้</p>';
+}
+function guard(){
+ var el=$("g"),pf=$("pf");if(!el)return;
+ var t=sum();
+ hero();$("hd").innerHTML=head();
+ if(!(t>0)){pf.innerHTML="";el.innerHTML='<p class="note">ใส่จำนวนเงินของแต่ละแบรนด์เพื่อดูคะแนนความเสี่ยงรวม</p>';return}
+ var rk=risk(),core=Math.max(0,S.total-t);
+ pf.innerHTML=donut()+'<div class="row"><span>เงินในพอร์ตธีม</span><span class="big">'+fmt(t)+' บาท</span></div><div class="row"><span>ส่วนที่เหลือเป็นตัวกลาง</span><span class="big">'+fmt(core)+' บาท</span></div><div class="row"><span>คะแนนความเสี่ยงรวม</span><span class="pill" style="background:'+RC(rk)+'">'+rk.toFixed(1)+'/5</span></div>';
+ el.innerHTML=wHtml();
+}
+function sim(){
+ var el=$("sim");if(!el)return;
+ var per=S.freq==="w"?4:1,t=sum();
+ if(!(t>0)){el.innerHTML='<p class="note">ยังไม่มีจำนวนเงินในพอร์ต</p>';return}
+ var each=t/per,inv=t*S.mo,r=risk(),SC=scen(r);
+ var h='<div class="row"><span>ลงครั้งละ</span><span class="big">'+fmt(each)+' บาท</span></div><table><tr><th>สถานการณ์สมมติ</th><th>ผลเทียบเงินต้น</th><th>มูลค่าปลายทาง</th></tr>';
+ SC.forEach(function(x){h+='<tr><td>'+x[0]+'</td><td>'+(x[1]>0?"+":"")+x[1].toFixed(0)+'%</td><td>'+fmt(inv*(1+x[1]/100))+'</td></tr>'});
+ el.innerHTML=h+'</table><p class="note">จำลองตามคะแนนความเสี่ยงรวม '+r.toFixed(1)+'/5 ไม่ใช่การคาดการณ์ผลตอบแทน</p>';
+}
+function port(){
+ var ok=S.ack[0]&&S.ack[1]&&S.ack[2];
+ var h='<div class="top"><h2>พอร์ตจำลอง</h2><span class="tagg">เงินสมมติ</span></div><div id="hero"></div>';
+ h+='<div class="card"><b>ตั้งค่าพอร์ต</b><label for="tot">เงินลงทุนรวมต่อเดือน (บาท)</label><input type="number" id="tot" inputmode="numeric" min="0" value="'+(S.total||"")+'">';
+ if(!S.pick.length)h+='<p class="note">ยังไม่ได้เลือกแบรนด์ ไปที่หน้า “ค้นหา” แล้วกด “ใส่พอร์ตจำลอง”</p>';
+ S.pick.forEach(function(id){var b=B(id);h+='<label for="a-'+id+'">'+b.n+' ('+b.p+') บาทต่อเดือน</label><input type="number" id="a-'+id+'" data-a="'+id+'" inputmode="numeric" min="0" value="'+(S.amt[id]||"")+'"><button class="ghost" style="margin-top:6px" data-pick="'+id+'">เอาออกจากพอร์ต</button>'});
+ h+='<div id="pf"></div><label for="th">เกณฑ์เตือนเมื่อธีมเกิน <span id="thv">'+S.th+'%</span> ของเงินลงทุนรวม</label><input type="range" id="th" min="10" max="100" step="5" value="'+S.th+'"><div id="g"></div></div>';
+ h+='<div class="card"><b>จำลอง DCA</b><div class="chips"><button class="chip'+(S.freq==="m"?" on":"")+'" data-f="m">รายเดือน</button><button class="chip'+(S.freq==="w"?" on":"")+'" data-f="w">รายสัปดาห์</button></div><label for="mo">ลงต่อเนื่อง <span id="mov">'+S.mo+'</span> เดือน</label><input type="range" id="mo" min="6" max="36" value="'+S.mo+'"><div id="sim"></div><div class="les">DCA คือทยอยลงเท่า ๆ กันสม่ำเสมอ ช่วยลดปัญหาเลือกจังหวะซื้อ แต่ไม่ได้ทำให้ไม่ขาดทุน</div></div>';
+ h+='<div class="card"><b>“ชอบ ไม่ได้แปลว่ากำไร”</b><p class="note" style="margin:2px 0">ติ๊กให้ครบก่อนยืนยันแผน</p>';
+ ["ฉันรู้ว่าการชอบแบรนด์ ไม่ได้รับประกันว่าราคาจะขึ้น","ฉันรู้ว่ามูลค่าลงทุนอาจลดลงและอาจขาดทุนเงินต้น","ฉันใช้เฉพาะเงินเย็นที่ไม่จำเป็นต้องใช้ในระยะสั้น"].forEach(function(t,i){h+='<label class="chk"><input type="checkbox" data-k="'+i+'"'+(S.ack[i]?" checked":"")+'>'+t+'</label>'});
+ h+='<div class="al wn">เดโมนี้ไม่ซื้อขายจริง ในแอปจริงจะเชื่อมกับโบรกเกอร์หรือบริษัทจัดการกองทุนที่มีใบอนุญาต</div><button class="main" id="conf"'+(ok&&sum()>0?"":" disabled")+'>ยืนยันแผน (เดโม)</button>';
+ if(S.done)h+='<div class="al ok">บันทึกแผนจำลองแล้ว (ไม่มีการซื้อขายจริง) คัดลอกสรุปไปแชร์หรือเก็บไว้ได้</div><textarea readonly>'+summary()+'</textarea><button class="main" data-reset="1">เปลี่ยนแผนและจำลองใหม่</button>';
+ return h+'</div>';
 }
 function render(){
- steps();bar();
- $("v").innerHTML=[s1,s2,s3,s4,s5][S.step]();
- if(S.step===2)guard();if(S.step===3)sim();
+ $("hd").innerHTML=head();tabs();
+ $("v").innerHTML=S.detail?detail():[home,search,compareTab,port][S.tab]();
+ if(!S.detail&&S.tab===3){guard();sim()}
 }
+function go(){window.scrollTo(0,0)}
 $("v").onclick=function(ev){
  var t=ev.target.closest("button");if(!t)return;
- if(t.hasAttribute("data-hz")){S.hz=+t.getAttribute("data-hz");save();render();return}
- if(t.hasAttribute("data-lt")){S.lt=+t.getAttribute("data-lt");save();render();return}
- if(t.hasAttribute("data-cmp")){var ci=t.getAttribute("data-cmp"),cj=S.cmp.indexOf(ci);if(cj>-1)S.cmp.splice(cj,1);else{S.cmp.push(ci);if(S.cmp.length>3)S.cmp.shift()}save();render();return}
- if(t.hasAttribute("data-watch")){var wi=t.getAttribute("data-watch");if(S.watch[wi])delete S.watch[wi];else S.ask=wi;save();render();return}
- if(t.hasAttribute("data-w")){var wp=t.getAttribute("data-w").split("|");S.watch[wp[1]]=wp[0];S.ask="";save();render();return}
- if(t.hasAttribute("data-wr")){delete S.watch[t.getAttribute("data-wr")];save();render();return}
- if(t.hasAttribute("data-go")){S.step=+t.getAttribute("data-go");save();render();window.scrollTo(0,0);return}
- if(t.hasAttribute("data-cat")){var c=+t.getAttribute("data-cat"),k=S.cats.indexOf(c);if(k>-1)S.cats.splice(k,1);else S.cats.push(c);save();render();return}
- if(t.hasAttribute("data-pick")){var id=t.getAttribute("data-pick"),j=S.pick.indexOf(id);if(j>-1){S.pick.splice(j,1)}else if(S.pick.length<6){S.pick.push(id);if(!S.amt[id])S.amt[id]=100}save();render();return}
- if(t.hasAttribute("data-f")){S.freq=t.getAttribute("data-f");save();render();return}
+ var g=function(a){return t.getAttribute(a)};
+ if(t.hasAttribute("data-open")){S.detail=g("data-open");save();render();go();return}
+ if(t.hasAttribute("data-back")){S.detail="";save();render();go();return}
+ if(t.hasAttribute("data-try")){var id0=g("data-try");if(S.pick.indexOf(id0)<0&&S.pick.length<6){S.pick.push(id0);if(!S.amt[id0])S.amt[id0]=100}S.detail="";S.tab=3;save();render();go();return}
+ if(t.hasAttribute("data-tab")){S.tab=+g("data-tab");S.detail="";save();render();go();return}
+ if(t.hasAttribute("data-hz")){S.hz=+g("data-hz");save();render();return}
+ if(t.hasAttribute("data-lt")){S.lt=+g("data-lt");save();render();return}
+ if(t.hasAttribute("data-cmp")){var ci=g("data-cmp"),cj=S.cmp.indexOf(ci);if(cj>-1)S.cmp.splice(cj,1);else{S.cmp.push(ci);if(S.cmp.length>3)S.cmp.shift()}save();render();return}
+ if(t.hasAttribute("data-watch")){var wi=g("data-watch");if(S.watch[wi])delete S.watch[wi];else S.ask=wi;save();render();return}
+ if(t.hasAttribute("data-w")){var wp=g("data-w").split("|");S.watch[wp[1]]=wp[0];S.ask="";save();render();return}
+ if(t.hasAttribute("data-wr")){delete S.watch[g("data-wr")];save();render();return}
+ if(t.hasAttribute("data-cat")){var c=+g("data-cat"),k=S.cats.indexOf(c);if(k>-1)S.cats.splice(k,1);else S.cats.push(c);save();render();return}
+ if(t.hasAttribute("data-pick")){var id=g("data-pick"),j=S.pick.indexOf(id);if(j>-1){S.pick.splice(j,1)}else if(S.pick.length<6){S.pick.push(id);if(!S.amt[id])S.amt[id]=100}save();render();return}
+ if(t.hasAttribute("data-f")){S.freq=g("data-f");save();render();return}
+ if(t.hasAttribute("data-reset")){S.ack=[false,false,false];S.done=false;save();render();return}
  if(t.id==="conf"){S.done=true;save();render()}
 };
 $("v").oninput=function(ev){
@@ -291,9 +294,11 @@ $("v").oninput=function(ev){
  if(e.id==="tot"){S.total=Math.max(0,+e.value||0);save();guard();return}
  if(e.hasAttribute("data-a")){S.amt[e.getAttribute("data-a")]=Math.max(0,+e.value||0);save();guard();return}
  if(e.id==="th"){S.th=+e.value;save();$("thv").textContent=S.th+"%";guard();return}
- if(e.id==="mo"){S.mo=+e.value;save();$("mov").textContent=S.mo;sim()}
+ if(e.id==="mo"){S.mo=+e.value;save();$("mov").textContent=S.mo;hero();sim()}
 };
 $("v").onchange=function(ev){var e=ev.target;if(e.hasAttribute("data-k")){S.ack[+e.getAttribute("data-k")]=e.checked;save();render()}};
+$("tabs").onclick=function(ev){var t=ev.target.closest("button");if(!t)return;S.tab=+t.getAttribute("data-tab");S.detail="";save();render();go()};
+$("hd").onclick=function(ev){var t=ev.target.closest("button");if(!t)return;S.tab=3;S.detail="";save();render();go()};
 render();
 </script>
 </body>
