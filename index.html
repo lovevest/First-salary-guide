@@ -5,10 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>LOVEVEST – เดโม</title>
 <style>
-:root{--bg:#eef1e8;--card:#f8f9f3;--tx:#17332a;--mut:#6d7c72;--bd:#dde3d3;--pri:#23553f;--pri-tx:#fff;--lime:#d9ebaa;--tg:#e1ebd2;--warn:#f8e9d2;--warn-tx:#8a5a22;--bad:#fdecec;--bad-tx:#9b1c1c;--ok:#e1ebd2;--ok-tx:#1d4a35;--hero:#1f4d3a;
+:root{--bg:#eef2f9;--card:#f7f9fd;--tx:#14233f;--mut:#667794;--bd:#dae2f0;--pri:#1f4fa3;--pri-tx:#fff;--lime:#cfe0ff;--tg:#dde8f8;--warn:#f8e9d2;--warn-tx:#8a5a22;--bad:#fdecec;--bad-tx:#9b1c1c;--ok:#dde8f8;--ok-tx:#173d7a;--hero:#173f82;
 box-sizing:border-box;padding-top:env(safe-area-inset-top,0px)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#0f1a15;--card:#16241d;--tx:#e8f0e6;--mut:#9db0a4;--bd:#25382d;--pri:#7cc29b;--pri-tx:#0f1a15;--tg:#1f3a2b;--warn:#3a2d17;--warn-tx:#f2cf93;--bad:#3a1717;--bad-tx:#f5b5b5;--ok:#1f3a2b;--ok-tx:#bfe6cf}}
-:root[data-theme="dark"]{color-scheme:dark;--bg:#0f1a15;--card:#16241d;--tx:#e8f0e6;--mut:#9db0a4;--bd:#25382d;--pri:#7cc29b;--pri-tx:#0f1a15;--tg:#1f3a2b;--warn:#3a2d17;--warn-tx:#f2cf93;--bad:#3a1717;--bad-tx:#f5b5b5;--ok:#1f3a2b;--ok-tx:#bfe6cf}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#0c1424;--card:#121e33;--tx:#e6edf9;--mut:#9aabc4;--bd:#223350;--pri:#7fa8ff;--pri-tx:#0c1424;--tg:#1b2c4a;--warn:#3a2d17;--warn-tx:#f2cf93;--bad:#3a1717;--bad-tx:#f5b5b5;--ok:#1b2c4a;--ok-tx:#bcd3ff}}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#0c1424;--card:#121e33;--tx:#e6edf9;--mut:#9aabc4;--bd:#223350;--pri:#7fa8ff;--pri-tx:#0c1424;--tg:#1b2c4a;--warn:#3a2d17;--warn-tx:#f2cf93;--bad:#3a1717;--bad-tx:#f5b5b5;--ok:#1b2c4a;--ok-tx:#bcd3ff}
 html{scroll-padding-top:env(safe-area-inset-top,0px)}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--tx);font-family:"Noto Sans Thai",-apple-system,"Segoe UI",sans-serif;line-height:1.55}
@@ -18,9 +18,9 @@ main{max-width:560px;margin:0 auto;padding:10px 16px 110px}
 h2{font-size:21px;margin:6px 0 2px}h3{font-size:16px;margin:12px 0 6px}
 .note{font-size:13px;color:var(--mut)}small{font-size:12px;color:var(--mut)}
 .card{background:var(--card);border:1px solid var(--bd);border-radius:18px;padding:14px;margin:10px 0}
-.hero{background:var(--hero);color:#fff;border-radius:22px;padding:18px;margin:12px 0}.hero small,.hero p{color:#cfe3d6;margin:2px 0}.hero h1{font-size:34px;margin:2px 0}.hero h3{font-size:20px;margin:0 0 4px;color:#fff}
-.lime{font:inherit;font-size:14px;font-weight:700;padding:10px 16px;border-radius:12px;border:0;background:var(--lime);color:#1d3d2c;margin-top:10px;cursor:pointer}
-.ax{display:flex;justify-content:space-between;font-size:11px;color:#cfe3d6}
+.hero{background:var(--hero);color:#fff;border-radius:22px;padding:18px;margin:12px 0}.hero small,.hero p{color:#cfdcf3;margin:2px 0}.hero h1{font-size:34px;margin:2px 0}.hero h3{font-size:20px;margin:0 0 4px;color:#fff}
+.lime{font:inherit;font-size:14px;font-weight:700;padding:10px 16px;border-radius:12px;border:0;background:var(--lime);color:#12306a;margin-top:10px;cursor:pointer}
+.ax{display:flex;justify-content:space-between;font-size:11px;color:#cfdcf3}.hero polyline{stroke:#bfd7ff}
 .two{display:grid;grid-template-columns:1fr 1fr;gap:10px}.two .card{margin:4px 0;display:flex;flex-direction:column;gap:2px}.two b{font-size:16px}
 .chips{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0}
 .chip{font:inherit;font-size:14px;font-weight:600;padding:8px 13px;border-radius:999px;border:1px solid var(--bd);background:var(--tg);color:var(--tx);cursor:pointer}
@@ -93,7 +93,7 @@ BR.forEach(function(b){
  b.s={v:vs,z:zs,d:ds,t:Math.round((0.5*vs+0.2*zs+0.3*ds)*10)/10};
 });
 var REL={ig:"เจ้าของแบรนด์ (Meta เป็นเจ้าของ Instagram)",yt:"เจ้าของแบรนด์ (Alphabet เป็นเจ้าของ YouTube)",ps:"เจ้าของแบรนด์และผู้ผลิต (Sony)",xb:"เจ้าของแบรนด์ (Microsoft เป็นเจ้าของ Xbox)",nt:"เจ้าของแบรนด์และผู้ผลิต",sb:"เจ้าของแบรนด์และผู้ดำเนินกิจการ",ts:"เจ้าของแบรนด์และผู้ผลิต",by:"เจ้าของแบรนด์และผู้ผลิต",nf:"เจ้าของแบรนด์และผู้ให้บริการ",sp:"เจ้าของแบรนด์และผู้ให้บริการ",ds:"เจ้าของแบรนด์ (Disney+ ของ Walt Disney)",ab:"เจ้าของแบรนด์และแพลตฟอร์ม",nk:"เจ้าของแบรนด์",ap:"เจ้าของแบรนด์และผู้ออกแบบ",ad:"เจ้าของแบรนด์",ik:"เจ้าของแบรนด์เป็นบริษัทเอกชน ไม่ได้จดทะเบียนในตลาดหลักทรัพย์ (ต้องตรวจสอบข้อมูลเพิ่มเติม)"};
- var R3={ig:["พึ่งรายได้โฆษณา","กฎเรื่องข้อมูลผู้ใช้","แข่งกับแพลตฟอร์มวิดีโอสั้น"],yt:["พึ่งรายได้โฆษณา","แข่งกับแพลตฟอร์มวิดีโออื่น","กฎระเบียบด้านการแข่งขันและเนื้อหา"],ps:["เกมฮิตขึ้นลงตามรอบเครื่อง","ค่าเงิน เพราะขายทั่วโลก","ธุรกิจอื่นของ Sony มีผลต่อราคา"],xb:["เป็นส่วนเล็กของธุรกิจรวม","แข่งขันสูง","ต้นทุนเนื้อหาและการซื้อกิจการ"],nt:["พึ่งเกมฮิตไม่กี่เกม","วงจรเครื่องเล่นรุ่นใหม่","ค่าเงินเยน"],sb:["ต้นทุนวัตถุดิบและแรงงาน","พึ่งกำลังซื้อผู้บริโภค","แข่งกับร้านกาแฟอื่น"],ts:["ราคาผันผวนสูง","แข่งขันรถไฟฟ้ารุนแรง","นโยบายรัฐและผู้บริหารมีผลมาก"],by:["แข่งขันด้านราคาสูง","กฎระเบียบการค้าระหว่างประเทศ","ค่าเงินและห่วงโซ่แบตเตอรี่"],nf:["ต้นทุนเนื้อหาสูง","ผู้ใช้ยกเลิกสมาชิกง่าย","คู่แข่งสตรีมมิงจำนวนมาก"],sp:["ค่าลิขสิทธิ์เพลง","กำไรบาง","คู่แข่งรายใหญ่"],ds:["ต้นทุนเนื้อหา","พึ่งการท่องเที่ยว (สวนสนุก)","แข่งขันสตรีมมิง"],ab:["พึ่งการท่องเที่ยว","กฎหมายท้องถิ่นเรื่องที่พัก","แข่งกับแพลตฟอร์มจองที่พัก"],nk:["กระแสแฟชั่นเปลี่ยน","ห่วงโซ่อุปทานและค่าแรง","แข่งกับแบรนด์กีฬาอื่น"],ad:["กระแสแฟชั่นเปลี่ยน","ห่วงโซ่อุปทานและค่าแรง","แข่งกับแบรนด์กีฬาอื่น"],ap:["พึ่งยอดขายสินค้ารุ่นใหม่","กฎระเบียบแอปสโตร์","ห่วงโซ่อุปทานในเอเชีย"]};
+var R3={ig:["พึ่งรายได้โฆษณา","กฎเรื่องข้อมูลผู้ใช้","แข่งกับแพลตฟอร์มวิดีโอสั้น"],yt:["พึ่งรายได้โฆษณา","แข่งกับแพลตฟอร์มวิดีโออื่น","กฎระเบียบด้านการแข่งขันและเนื้อหา"],ps:["เกมฮิตขึ้นลงตามรอบเครื่อง","ค่าเงิน เพราะขายทั่วโลก","ธุรกิจอื่นของ Sony มีผลต่อราคา"],xb:["เป็นส่วนเล็กของธุรกิจรวม","แข่งขันสูง","ต้นทุนเนื้อหาและการซื้อกิจการ"],nt:["พึ่งเกมฮิตไม่กี่เกม","วงจรเครื่องเล่นรุ่นใหม่","ค่าเงินเยน"],sb:["ต้นทุนวัตถุดิบและแรงงาน","พึ่งกำลังซื้อผู้บริโภค","แข่งกับร้านกาแฟอื่น"],ts:["ราคาผันผวนสูง","แข่งขันรถไฟฟ้ารุนแรง","นโยบายรัฐและผู้บริหารมีผลมาก"],by:["แข่งขันด้านราคาสูง","กฎระเบียบการค้าระหว่างประเทศ","ค่าเงินและห่วงโซ่แบตเตอรี่"],nf:["ต้นทุนเนื้อหาสูง","ผู้ใช้ยกเลิกสมาชิกง่าย","คู่แข่งสตรีมมิงจำนวนมาก"],sp:["ค่าลิขสิทธิ์เพลง","กำไรบาง","คู่แข่งรายใหญ่"],ds:["ต้นทุนเนื้อหา","พึ่งการท่องเที่ยว (สวนสนุก)","แข่งขันสตรีมมิง"],ab:["พึ่งการท่องเที่ยว","กฎหมายท้องถิ่นเรื่องที่พัก","แข่งกับแพลตฟอร์มจองที่พัก"],nk:["กระแสแฟชั่นเปลี่ยน","ห่วงโซ่อุปทานและค่าแรง","แข่งกับแบรนด์กีฬาอื่น"],ad:["กระแสแฟชั่นเปลี่ยน","ห่วงโซ่อุปทานและค่าแรง","แข่งกับแบรนด์กีฬาอื่น"],ap:["พึ่งยอดขายสินค้ารุ่นใหม่","กฎระเบียบแอปสโตร์","ห่วงโซ่อุปทานในเอเชีย"]};
 var PAL=["#4f46e5","#10b981","#f59e0b","#d93a3a","#0ea5e9","#a855f7"];
 function RC(t){return t<2.5?"#10b981":t<3.5?"#f59e0b":"#d93a3a"}
 
@@ -228,7 +228,7 @@ function hero(){
  var t=sum(),inv=t*S.mo;
  if(!(t>0)){el.innerHTML='<div class="hero"><small>มูลค่าพอร์ตปลายงวด</small><h1>0.00</h1><p>เพิ่มแบรนด์จากหน้าแบรนด์ แล้วกำหนดเงินต่อเดือน</p></div>';return}
  var W=300,H=80,pts=[];for(var m=0;m<=S.mo;m++)pts.push((m/S.mo*W).toFixed(1)+","+(H-4-(m/S.mo)*(H-10)).toFixed(1));
- el.innerHTML='<div class="hero"><small>มูลค่าพอร์ตปลายงวด</small><h1>'+inv.toLocaleString("th-TH",{minimumFractionDigits:2,maximumFractionDigits:2})+'</h1><small>บาท / ตลาดทรงตัว 0% ต่อเดือน</small><svg width="100%" viewBox="0 0 '+W+' '+H+'"><polyline fill="none" stroke="#d9ebaa" stroke-width="2.5" points="'+pts.join(" ")+'"/></svg><div class="ax"><span>เดือน 1</span><span>เดือน '+S.mo+'</span></div></div>'+
+ el.innerHTML='<div class="hero"><small>มูลค่าพอร์ตปลายงวด</small><h1>'+inv.toLocaleString("th-TH",{minimumFractionDigits:2,maximumFractionDigits:2})+'</h1><small>บาท / ตลาดทรงตัว 0% ต่อเดือน</small><svg width="100%" viewBox="0 0 '+W+' '+H+'"><polyline fill="none" stroke="#bfd7ff" stroke-width="2.5" points="'+pts.join(" ")+'"/></svg><div class="ax"><span>เดือน 1</span><span>เดือน '+S.mo+'</span></div></div>'+
  '<div class="two"><div class="card"><small>เงินสะสม</small><b>'+fmt(inv)+' บาท</b></div><div class="card"><small>ส่วนต่างสมมติ</small><b>0.00 บาท</b></div></div><div class="two"><div class="card"><small>ลงทุนรายเดือน</small><b>'+fmt(t)+' บาท</b></div><div class="card"><small>ระยะเวลา</small><b>'+S.mo+' เดือน</b></div></div><p class="note">กราฟแสดงเงินต้น ไม่ใช่ผลตอบแทนที่ได้</p>';
 }
 function guard(){
